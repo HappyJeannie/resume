@@ -1,0 +1,57 @@
+.wrapper {
+  background: #000;
+}
+.wrapper .header .topNavBar {
+  position: fixed;
+  left: 0px;
+  display: block;
+  width: 100%;
+  max-width: 1550px;
+  padding: 20px 15px;
+  margin: 0 auto;
+}
+.wrapper .header .topNavBar .logo {
+  float: left;
+  color: #9a9da2;
+  font-size: 30px;
+  font-weight: 400;
+}
+.wrapper .header .topNavBar .logo span.rs {
+  color: #e8676b;
+  font-weight: 700;
+}
+.wrapper .header .topNavBar nav {
+  float: right;
+  line-height: 42px;
+}
+.wrapper .header .topNavBar nav ul li {
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 12px;
+  float: left;
+}
+.wrapper .header .topNavBar nav ul li a {
+  display: block;
+  height: 30px;
+  margin-top: 6px;
+  line-height: 30px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+.wrapper .header .topNavBar nav ul li a:before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: none;
+  width: 100%;
+  height: 2px;
+  background: #e8676b;
+}
+.wrapper .header .topNavBar nav ul li:hover a:before {
+  display: block;
+}
+.wrapper .content {
+  padding-top: 100px;
+}

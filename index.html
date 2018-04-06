@@ -12,7 +12,7 @@
   <!-- DOCTYPE用于选择文本类型 -->
   <div class="wrapper">
     <header class="header">
-      <div class="topNavBar">
+      <div class="topNavBar" id="topBar">
         <a href="#" class="logo clearfix" alt="logo">
           <span class="rs">Rs</span>
           <span class="card">card</span>
@@ -29,94 +29,170 @@
           </ul>
         </nav>
       </div>
+      <div class="headerBg">
+        <div class="mask"></div>
+      </div>
     </header>
     <div class="content">
-      <div class="banner" style="background-image:url()">
-        <main>
-          <div class="card">
-              <div class="picture">
-                  <img src="#" alt="头像">
-              </div>
-              <div class="text">
+      <div class="container">
+          <div class="main">
+              <div class="card">
                   <div class="profile">
-                      <span class="welcome">Hello</span>
-                      <h1>Summer</h1>
-                      <p>前端开发工程师</p>
-                      <hr>
-                      <!-- description list dl-->
-                      <dl>
-                        <dt>年龄</dt>
-                        <dd>18</dd>
-                        <dt>城市</dt>
-                        <dd>北京</dd>
-                        <dt>邮箱</dt>
-                        <dd>yanjun2014npu@163.com</dd>
-                        <dt>手机</dt>
-                      </dl>
-                    </div>
+                      <div class="picture">
+                          <img src="./img/avatar.png" alt="头像">
+                      </div>
+                      <div class="text">
+                        <div class="profile-info">
+                            <span class="welcome">Hello</span>
+                            <h1>Summer</h1>
+                            <p>前端开发工程师</p>
+                        </div>
+                        <div class="profile-list">
+                            <dl class="clearfix">
+                                <dt>年龄</dt>
+                                <dd>18</dd>
+                                <dt>城市</dt>
+                                <dd>北京</dd>
+                                <dt>邮箱</dt>
+                                <dd>yanjun2014npu@163.com</dd>
+                                <dt>手机</dt>
+                                <dd>13313313133</dd>
+                              </dl>
+                        </div>
+                        <!-- description list dl-->
+                      </div>
+                  </div>
               </div>
-              
               <footer class="media">
-                  <a href="#">
-                    <image src="#" alt="..."></image>
+                  <a href="https://happyjeannie.github.io/">
+                    <img src="./img/github.svg" alt="github">
                   </a>
-                  <a href="#">
-                    <image src="#" alt="..."></image>
+                  <a href="https://www.jianshu.com/u/d837006978d0">
+                    <span>简</span>
                   </a>
-                  <a href="#">
-                    <image src="#" alt="..."></image>
-                  </a>
-                  <a href="#">
-                    <image src="#" alt="..."></image>
-                  </a>
-                  <a href="#">
-                    <image src="#" alt="..."></image>
-                  </a>
-                  <a href="#">
-                    <image src="#" alt="..."></image>
-                  </a>
-                  <a href="#">
-                    <image src="#" alt="..."></image>
-                  </a>
+                  <a href="https://www.zhihu.com/people/tu-zhi-16-79/posts">
+                      <img src="./img/zhihu.svg" alt="github">
+                    </a>
                 </footer>
-          </div>
-          <a href="#" class="button">下载PDF简历</a>
-          <p>
-            Summer,前端工程师。<br>
-            技能：搞事情
-          </p>
-        </main>
-        <section>
-          <h2>技能</h2>
-          <ol>
-            <li>HTML 5 &amp; CSS 3</li>
-            <li>Javascript</li>
-            <li>jQuery</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>HTTP</li>
-          </ol>
-        </section>
-        <section>
-          <h2>作品集</h2>
-          <nav>
-            <ol>
-              <li>所有</li>
-              <li>框架</li>
-              <li>原生JS &amp; CSS</li>
-            </ol>
-          </nav>
-          <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
-          </div>
-        </section>
+            </div>
+            <section class="personal">
+                <a href="#" class="button">下载PDF简历</a>
+                <p>
+                  Summer,前端工程师。<br>目前已经有一定的工作经验，目前正在逐渐完善知识体系。欢迎通过以上链接访问我的Github、简书以及知乎。
+                </p>
+            </section>
+            <section class="skills section">
+              <h2>技能</h2>
+              <ul class="clearfix">
+                <li class="bar">
+                  <div class="barData">
+                    HTML 5 &amp; CSS 3
+                  </div>
+                  <div class="barLine">
+                    <span></span>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="barData">
+                    Javascript
+                  </div>
+                  <div class="barLine">
+                    <span></span>
+                  </div>
+                </li>
+                <li class="bar">
+                    <div class="barData">
+                      jQuery
+                    </div>
+                    <div class="barLine">
+                      <span></span>
+                    </div>
+                  </li>
+                  <li class="bar">
+                      <div class="barData">
+                        Vue
+                      </div>
+                      <div class="barLine">
+                        <span></span>
+                      </div>
+                    </li>
+                <li class="bar">
+                  <div class="barData">
+                    React
+                  </div>
+                  <div class="barLine">
+                    <span></span>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="barData">
+                    HTTP
+                  </div>
+                  <div class="barLine">
+                    <span></span>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="profolio section">
+              <h2>作品集</h2>
+              <nav>
+                <ol class="clearfix">
+                  <li>所有</li>
+                  <li>框架</li>
+                  <li>原生JS &amp; CSS</li>
+                </ol>
+                <div class="bar">
+                  <span></span>
+                </div>
+              </nav>
+              <div class="jobs clearfix">
+                <div class="big">
+                  <ul>
+                    <li class="job-item">
+                        <div class="img"></div>
+                        <div class="txt">
+                          <p class="tit">作品一</p>
+                          <p>作品描述</p>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="small">
+                  <ul>
+                    <li class="job-item">
+                        <div class="img"></div>
+                        <div class="txt">
+                          <p class="tit">作品二</p>
+                          <p>作品描述</p>
+                        </div>
+                    </li>
+                    <li class="job-item">
+                        <div class="img"></div>
+                        <div class="txt">
+                          <p class="tit">作品三</p>
+                          <p>作品描述</p>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
       </div>
+      
     </div>
     <footer class="footer"></footer>
   </div>
-  
-  
+  <script>
+    window.onscroll = function(){ 
+        var t = document.documentElement.scrollTop || document.body.scrollTop;  //获取距离页面顶部的距离
+        var target = document.getElementById('topBar');
+        if( t >0 ) { 
+          target.className = 'topNavBar active';
+        } else { 
+          target.className = 'topNavBar';
+        } 
+    } 
+  </script>
 </body>
 </html>

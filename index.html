@@ -89,7 +89,7 @@
                     HTML 5 &amp; CSS 3
                   </div>
                   <div class="barLine">
-                    <span></span>
+                    <span style="width:90%;"></span>
                   </div>
                 </li>
                 <li class="bar">
@@ -97,7 +97,7 @@
                     Javascript
                   </div>
                   <div class="barLine">
-                    <span></span>
+                    <span style="width:60%;"></span>
                   </div>
                 </li>
                 <li class="bar">
@@ -105,7 +105,7 @@
                       jQuery
                     </div>
                     <div class="barLine">
-                      <span></span>
+                      <span style="width:70%;"></span>
                     </div>
                   </li>
                   <li class="bar">
@@ -113,23 +113,23 @@
                         Vue
                       </div>
                       <div class="barLine">
-                        <span></span>
+                        <span style="width:40%;"></span>
                       </div>
                     </li>
                 <li class="bar">
                   <div class="barData">
-                    React
+                    NodeJs
                   </div>
                   <div class="barLine">
-                    <span></span>
+                    <span style="width:40%;"></span>
                   </div>
                 </li>
                 <li class="bar">
                   <div class="barData">
-                    HTTP
+                    小程序
                   </div>
                   <div class="barLine">
-                    <span></span>
+                    <span style="width:80%;"></span>
                   </div>
                 </li>
               </ul>
@@ -138,50 +138,51 @@
               <h2>作品集</h2>
               <nav>
                 <ol class="clearfix">
-                  <li>所有</li>
-                  <li>框架</li>
-                  <li>原生JS &amp; CSS</li>
+                  <li id="profolio01">所有</li>
+                  <li id="profolio02">框架</li>
+                  <li id="profolio03">原生JS &amp; CSS</li>
                 </ol>
                 <div class="bar">
-                  <span></span>
+                  <span id="activeBar" class="bar01"></span>
                 </div>
               </nav>
               <div class="jobs clearfix">
-                <div class="big">
-                  <ul>
-                    <li class="job-item">
-                        <div class="img"></div>
-                        <div class="txt">
-                          <p class="tit">作品一</p>
-                          <p>作品描述</p>
-                        </div>
-                    </li>
-                  </ul>
+                <div class="big job">
+                  <a href="https://happyjeannie.github.io/" target="_blank">
+                      <div class="img"></div>
+                      <div class="txt">
+                        <p class="tit">个人博客</p>
+                        <p class="detail">Hexo+Github搭建个人博客</p>
+                      </div>
+                  </a>
+                  
                 </div>
-                <div class="small">
-                  <ul>
-                    <li class="job-item">
-                        <div class="img"></div>
-                        <div class="txt">
-                          <p class="tit">作品二</p>
-                          <p>作品描述</p>
-                        </div>
-                    </li>
-                    <li class="job-item">
-                        <div class="img"></div>
-                        <div class="txt">
-                          <p class="tit">作品三</p>
-                          <p>作品描述</p>
-                        </div>
-                    </li>
-                  </ul>
+                <div class="small job" style="left:620px;top:0px;">
+                  <a href="https://happyjeannie.github.io/resume/index.html" target="_blank">
+                    <div class="img"></div>
+                    <div class="txt">
+                      <p class="tit">个人简历</p>
+                      <p class="detail">各个项目介绍</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="small job" style="left:620px;top:295px;">
+                  <a href="javascript:;">
+                      <div class="img"></div>
+                      <div class="txt">
+                        <p class="tit">作品三</p>
+                        <p class="detail">作品描述</p>
+                      </div>
+                  </a>
                 </div>
               </div>
             </section>
       </div>
       
     </div>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      Summer的个人简历
+    </footer>
   </div>
   <script>
     window.onscroll = function(){ 
@@ -193,6 +194,15 @@
           target.className = 'topNavBar';
         } 
     } 
+    profolio01.onclick = function(){
+      activeBar.className = "bar01";
+    }
+    profolio02.onclick = function(){
+      activeBar.className = "bar02";
+    }
+    profolio03.onclick = function(){
+      activeBar.className = "bar03";
+    }
   </script>
 </body>
 </html>

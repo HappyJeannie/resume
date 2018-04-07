@@ -7,7 +7,6 @@
   left: 0px;
   display: block;
   width: 100%;
-  max-width: 1550px;
   padding: 20px 15px;
   margin: 0 auto;
   z-index: 100;
@@ -316,6 +315,7 @@
 }
 .wrapper .content .profolio {
   text-align: center;
+  margin-bottom: 40px;
 }
 .wrapper .content .profolio nav {
   display: inline-block;
@@ -338,6 +338,7 @@
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   display: inline-block;
+  cursor: pointer;
 }
 .wrapper .content .profolio nav ol li:first-child {
   padding-left: 0px;
@@ -359,7 +360,7 @@
 .wrapper .content .profolio nav div.bar span {
   top: 0;
   left: 0;
-  width: 20px;
+  width: 26px;
   height: 100%;
   display: block;
   position: relative;
@@ -371,15 +372,61 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.wrapper .content .profolio .jobs ul .job-item {
+.wrapper .content .profolio nav div.bar span.bar01 {
+  left: 0px;
+  width: 26px;
+}
+.wrapper .content .profolio nav div.bar span.bar02 {
+  left: 70px;
+  width: 26px;
+}
+.wrapper .content .profolio nav div.bar span.bar03 {
+  left: 140px;
+  width: 86px;
+}
+.wrapper .content .profolio .jobs {
+  position: relative;
+  height: 620px;
+}
+.wrapper .content .profolio .jobs .job {
   padding: 0px 10px;
   margin-bottom: 20px;
-  position: relative;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
 }
-.wrapper .content .profolio .jobs ul .job-item:last-child {
-  margin-bottom: 0px;
+.wrapper .content .profolio .jobs .job > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-.wrapper .content .profolio .jobs ul .job-item .txt {
+.wrapper .content .profolio .jobs .job > a:hover .img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+.wrapper .content .profolio .jobs .job > a:hover .txt .detail {
+  top: 60%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.wrapper .content .profolio .jobs .job .img {
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  -moz-transform: scale(1);
+}
+.wrapper .content .profolio .jobs .job .txt {
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -391,15 +438,16 @@
   padding-right: 5%;
   padding-top: 10px;
   padding-bottom: 20px;
+  overflow: hidden;
 }
-.wrapper .content .profolio .jobs ul .job-item .txt p {
+.wrapper .content .profolio .jobs .job .txt p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 13px;
   font-weight: 400;
   line-height: 1.1;
   text-transform: uppercase;
 }
-.wrapper .content .profolio .jobs ul .job-item .txt p.tit {
+.wrapper .content .profolio .jobs .job .txt p.tit {
   font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
@@ -407,24 +455,28 @@
   margin: 0 0 25px 0;
   color: #fff;
 }
+.wrapper .content .profolio .jobs .job .txt p.detail {
+  position: absolute;
+  top: 100%;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
 .wrapper .content .profolio .jobs .big {
-  float: left;
   width: 66.6%;
   height: 570px;
 }
-.wrapper .content .profolio .jobs .big ul {
-  height: 100%;
-}
-.wrapper .content .profolio .jobs .big ul .job-item {
-  height: 100%;
-}
-.wrapper .content .profolio .jobs .big ul .job-item .img {
+.wrapper .content .profolio .jobs .big .img {
   height: 100%;
   display: block;
   background: url('../img/pro01.jpg') no-repeat center center;
   background-size: cover;
 }
-.wrapper .content .profolio .jobs .big ul .job-item .img:before {
+.wrapper .content .profolio .jobs .big .img:before {
   content: '';
   background: rgba(0, 0, 0, 0.4);
   display: block;
@@ -432,28 +484,31 @@
   height: 100%;
 }
 .wrapper .content .profolio .jobs .small {
-  float: right;
   width: 33.3%;
-}
-.wrapper .content .profolio .jobs .small ul {
-  height: 100%;
-}
-.wrapper .content .profolio .jobs .small ul .job-item {
   height: 275px;
 }
-.wrapper .content .profolio .jobs .small ul .job-item .img {
+.wrapper .content .profolio .jobs .small .img {
   height: 100%;
   display: block;
   background: url('../img/pro02.jpg') no-repeat center center;
   background-size: cover;
 }
-.wrapper .content .profolio .jobs .small ul .job-item .img:before {
+.wrapper .content .profolio .jobs .small .img:before {
   content: '';
   background: rgba(0, 0, 0, 0.4);
   display: block;
   width: 100%;
   height: 100%;
 }
-.wrapper .content .profolio .jobs .small ul .job-item:last-child .img {
+.wrapper .content .profolio .jobs .small:last-child .img {
   background-image: url('../img/pro03.jpg');
+}
+footer.footer {
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  color: #666;
+  text-align: center;
+  font-size: 12px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }

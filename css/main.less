@@ -12,9 +12,11 @@
       padding: 20px 15px;
       margin: 0 auto;
       z-index: 100;
+      transition: all 0.2s;
       &.active{
         background: #fff;
-        box-shadow: 0 4px 6px #eee;
+        box-shadow: 0 4px 10px #eee;
+        padding: 10px 15px;
         .logo{
           span.card{
             color: rgba(0,0,0,0.7);
@@ -47,13 +49,14 @@
       nav{
         float: right;
         line-height: 42px;
-        ul{
-          li{
+        >ul{
+          >li{
             margin-left: 16px;
             margin-right: 16px;
             font-size: 12px;
             float: left;
-            a{
+            position: relative;
+            >a{
               display: block;
               height: 30px;
               margin-top: 6px;
@@ -66,16 +69,54 @@
                 position: absolute;
                 bottom: 0px;
                 left: 0px;
-                display: none;
-                width: 100%;
+                display: block;
+                width: 0%;
                 height: 2px;
                 background: @mark;
+                transition: width 0.3s ease-in-out;
+              }
+            }
+            ul.submenu{
+              position:absolute;
+              top: 100%;
+              right: 0%;
+              background: #fff;
+              padding: 10px 6px;
+              box-shadow: 0 0 8px #aaa;
+              white-space: nowrap;
+              color: rgba(0, 0, 0, 0.7);
+              display: none;
+              li{
+                padding: 0px 10px;
+                border-bottom: 1px solid #e6e6e6;
+                line-height: 30px;
+                text-align: right;
+                cursor: pointer;
               }
             }
             &:hover{
-              a{
+              >a{
                 &:before{
                   display: block;
+                }
+              }
+            }
+            &.active{
+              >a{
+                &:before{
+                  width: 100%;
+                }
+              }
+              ul.submenu{
+                display: block;
+                animation: menuSlide 0.3s ease-in-out;
+              }
+              @keyframes menuSlide {
+                0%{
+                  right:100%;
+                }
+                100%{
+                  right: 0%;
                 }
               }
             }

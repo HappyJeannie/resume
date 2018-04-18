@@ -10,10 +10,12 @@
   padding: 20px 15px;
   margin: 0 auto;
   z-index: 100;
+  transition: all 0.2s;
 }
 .wrapper .header .topNavBar.active {
   background: #fff;
-  box-shadow: 0 4px 6px #eee;
+  box-shadow: 0 4px 10px #eee;
+  padding: 10px 15px;
 }
 .wrapper .header .topNavBar.active .logo span.card {
   color: rgba(0, 0, 0, 0.7);
@@ -39,13 +41,14 @@
   float: right;
   line-height: 42px;
 }
-.wrapper .header .topNavBar nav ul li {
+.wrapper .header .topNavBar nav > ul > li {
   margin-left: 16px;
   margin-right: 16px;
   font-size: 12px;
   float: left;
+  position: relative;
 }
-.wrapper .header .topNavBar nav ul li a {
+.wrapper .header .topNavBar nav > ul > li > a {
   display: block;
   height: 30px;
   margin-top: 6px;
@@ -54,18 +57,52 @@
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
 }
-.wrapper .header .topNavBar nav ul li a:before {
+.wrapper .header .topNavBar nav > ul > li > a:before {
   content: '';
   position: absolute;
   bottom: 0px;
   left: 0px;
-  display: none;
-  width: 100%;
+  display: block;
+  width: 0%;
   height: 2px;
   background: #e8676b;
+  transition: width 0.3s ease-in-out;
 }
-.wrapper .header .topNavBar nav ul li:hover a:before {
+.wrapper .header .topNavBar nav > ul > li ul.submenu {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background: #fff;
+  padding: 10px 6px;
+  box-shadow: 0 0 8px #aaa;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.wrapper .header .topNavBar nav > ul > li ul.submenu li {
+  padding: 0px 10px;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 30px;
+  text-align: right;
+  cursor: pointer;
+}
+.wrapper .header .topNavBar nav > ul > li:hover > a:before {
   display: block;
+}
+.wrapper .header .topNavBar nav > ul > li.active > a:before {
+  width: 100%;
+}
+.wrapper .header .topNavBar nav > ul > li.active ul.submenu {
+  display: block;
+  animation: menuSlide 0.3s ease-in-out;
+}
+@keyframes menuSlide {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: 0%;
+  }
 }
 .wrapper .header .headerBg {
   height: 515px;

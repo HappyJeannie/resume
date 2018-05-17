@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="./css/load.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
+  <style>
+    .swiper-container {
+        width: 600px;
+        height: 300px;
+    }  
+  </style>
 </head>
 
 <body>
@@ -190,7 +197,20 @@
               <span id="activeBar" class="bar01"></span>
             </div>
           </nav>
-          <div class="jobs clearfix">
+          <div class="jobs">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/pro01.jpg"></div>
+                  <div class="swiper-slide"><img src="./img/pro02.jpg"></div>
+                  <div class="swiper-slide"><img src="./img/pro03.jpg"></div>
+              </div>
+              <!-- 如果需要导航按钮 -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+          </div>
+          </div>
+          <!-- <div class="jobs clearfix">
             <div class="big job">
               <a href="https://happyjeannie.github.io/" target="_blank">
                 <div class="img"></div>
@@ -219,7 +239,7 @@
                 </div>
               </a>
             </div>
-          </div>
+          </div> -->
         </section>
       </div>
 
@@ -229,7 +249,20 @@
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.js"></script>
   <script> 
+    //轮播
+    var mySwiper = new Swiper ('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    })        
+
     let oBlock = document.querySelectorAll('[data-xxx]');
     for (let i = 0; i < oBlock.length; i++) {
       oBlock[i].classList.add('offset');

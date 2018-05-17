@@ -431,7 +431,8 @@
 }
 .wrapper .content .profolio .jobs {
   position: relative;
-  height: 620px;
+  width: 800px;
+  height: 600px;
 }
 .wrapper .content .profolio .jobs .job {
   padding: 0px 10px;

@@ -361,6 +361,7 @@
 .wrapper .content .profolio {
   text-align: center;
   margin-bottom: 40px;
+  position: relative;
 }
 .wrapper .content .profolio nav {
   display: inline-block;
@@ -429,10 +430,22 @@
   left: 140px;
   width: 86px;
 }
+.wrapper .content .profolio .swiper-button-next,
+.wrapper .content .profolio .swiper-button-prev {
+  top: 64%;
+}
 .wrapper .content .profolio .jobs {
   position: relative;
   width: 800px;
   height: 600px;
+  display: inline-block;
+}
+.wrapper .content .profolio .jobs .swiper-container {
+  width: 800px;
+  height: 600px;
+}
+.wrapper .content .profolio .jobs .swiper-slide img {
+  width: 100%;
 }
 .wrapper .content .profolio .jobs .job {
   padding: 0px 10px;

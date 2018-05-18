@@ -395,6 +395,7 @@
     .profolio{
       text-align: center;
       margin-bottom: 40px;
+      position: relative;
       nav{
         display: inline-block;
         position: relative;
@@ -462,10 +463,23 @@
           }
         }
       }
+      .swiper-button-next, .swiper-button-prev{
+        top: 64%;
+      }
       .jobs{
         position: relative;
         width: 800px;
         height: 600px;
+        display: inline-block;
+        .swiper-container{
+          width: 800px;
+          height: 600px;
+        }
+        .swiper-slide{
+          img{
+            width: 100%;
+          }
+        }
         .job{
           padding: 0px 10px;
           margin-bottom: 20px;

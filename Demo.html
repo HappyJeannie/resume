@@ -1,27 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <style>
-    .loading{
-      position: absolute;
-      display: block;
-      width: 200px;
-      height: 200px;
-      border:1px solid #f00;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-    }
-  </style>
+  <title>Summer的简历</title>
+  <link rel="stylesheet" href="./css/load.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
 </head>
+
 <body>
-  <div class="loading">
+  <div class="site-welcome active" id="siteWelcome">
+    <div class="loading">
+    </div>
   </div>
+  <!-- DOCTYPE用于选择文本类型 -->
+  <div class="wrapper">
+    <header class="header">
+      <div class="topNavBar" id="topBar">
+        <a href="#" class="logo clearfix" alt="logo">
+          <span class="rs">Rs</span>
+          <span class="card">card</span>
+        </a>
+        <nav class="menu">
+          <ul class="clearfix">
+            <li>
+              <a href="#siteAbout">关于</a>
+            </li>
+            <li>
+              <a href="#siteSkills">技能</a>
+            </li>
+            <li>
+              <a href="#siteWorks">作品</a>
+              <ul class="submenu">
+                <li>
+                  <a href="#">作品1</a>
+                </li>
+                <li>
+                  <a href="#">作品2</a>
+                </li>
+                <li>
+                  <a href="#">作品3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">博客</a>
+              <ul class="submenu">
+                <li>
+                  <a href="#">博客1</a>
+                </li>
+                <li>
+                  <a href="#">博客2</a>
+                </li>
+                <li>
+                  <a href="#">博客3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">日历</a>
+            </li>
+            <li>
+              <a href="#">联系方式</a>
+            </li>
+            <li>
+              <a href="#">其他</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="headerBg">
+        <div class="mask"></div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="container">
+        <div class="main" id="siteAbout" data-xxx>
+          <div class="card">
+            <div class="profile">
+              <div class="picture">
+                <img src="./img/avatar.png" alt="头像">
+              </div>
+              <div class="text">
+                <div class="profile-info">
+                  <span class="welcome">Hello</span>
+                  <h1>Summer</h1>
+                  <p>前端开发工程师</p>
+                </div>
+                <div class="profile-list">
+                  <dl class="clearfix">
+                    <dt>年龄</dt>
+                    <dd>18</dd>
+                    <dt>城市</dt>
+                    <dd>北京</dd>
+                    <dt>邮箱</dt>
+                    <dd>yanjun2014npu@163.com</dd>
+                    <dt>手机</dt>
+                    <dd>13313313133</dd>
+                  </dl>
+                </div>
+                <!-- description list dl-->
+              </div>
+            </div>
+          </div>
+          <footer class="media">
+            <a href="https://happyjeannie.github.io/">
+              <img src="./img/github.svg" alt="github">
+            </a>
+            <a href="https://www.jianshu.com/u/d837006978d0">
+              <span>简</span>
+            </a>
+            <a href="https://www.zhihu.com/people/tu-zhi-16-79/posts">
+              <img src="./img/zhihu.svg" alt="github">
+            </a>
+          </footer>
+        </div>
+        <section class="personal">
+          <a href="#" class="button">下载PDF简历</a>
+          <p>
+            Summer,前端工程师。
+            <br>目前已经有一定的工作经验，目前正在逐渐完善知识体系。欢迎通过以上链接访问我的Github、简书以及知乎。
+          </p>
+        </section>
+        <section class="skills section" id="siteSkills" data-xxx>
+          <h2>技能</h2>
+          <ul class="clearfix">
+            <li class="bar">
+              <div class="barData">
+                HTML 5 &amp; CSS 3
+              </div>
+              <div class="barLine">
+                <span style="width:90%;"></span>
+              </div>
+            </li>
+            <li class="bar">
+              <div class="barData">
+                Javascript
+              </div>
+              <div class="barLine">
+                <span style="width:60%;"></span>
+              </div>
+            </li>
+            <li class="bar">
+              <div class="barData">
+                jQuery
+              </div>
+              <div class="barLine">
+                <span style="width:70%;"></span>
+              </div>
+            </li>
+            <li class="bar">
+              <div class="barData">
+                Vue
+              </div>
+              <div class="barLine">
+                <span style="width:40%;"></span>
+              </div>
+            </li>
+            <li class="bar">
+              <div class="barData">
+                NodeJs
+              </div>
+              <div class="barLine">
+                <span style="width:40%;"></span>
+              </div>
+            </li>
+            <li class="bar">
+              <div class="barData">
+                小程序
+              </div>
+              <div class="barLine">
+                <span style="width:80%;"></span>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="profolio section" id="siteWorks" data-xxx>
+          <h2>作品集</h2>
+          <nav>
+            <ol class="clearfix">
+              <li id="profolio01">所有</li>
+              <li id="profolio02">框架</li>
+              <li id="profolio03">原生JS &amp; CSS</li>
+            </ol>
+            <div class="bar">
+              <span id="activeBar" class="bar01"></span>
+            </div>
+          </nav>
+          <div class="jobs">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/canvas.jpg"></div>
+                  <div class="swiper-slide"><img src="./img/navbar.jpg"></div>
+                  <div class="swiper-slide"><img src="./img/swiper.png"></div>
+              </div>
+              
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <!-- 如果需要导航按钮 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <!-- <div class="jobs clearfix">
+            <div class="big job">
+              <a href="https://happyjeannie.github.io/" target="_blank">
+                <div class="img"></div>
+                <div class="txt">
+                  <p class="tit">个人博客</p>
+                  <p class="detail">Hexo+Github搭建个人博客</p>
+                </div>
+              </a>
+
+            </div>
+            <div class="small job" style="left:620px;top:0px;">
+              <a href="https://happyjeannie.github.io/resume/index.html" target="_blank">
+                <div class="img"></div>
+                <div class="txt">
+                  <p class="tit">个人简历</p>
+                  <p class="detail">各个项目介绍</p>
+                </div>
+              </a>
+            </div>
+            <div class="small job" style="left:620px;top:295px;">
+              <a href="javascript:;">
+                <div class="img"></div>
+                <div class="txt">
+                  <p class="tit">作品三</p>
+                  <p class="detail">作品描述</p>
+                </div>
+              </a>
+            </div>
+          </div> -->
+        </section>
+      </div>
+
+    </div>
+    <footer class="footer">
+      Summer的个人简历
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.js"></script>
+  <script> 
+    //轮播
+    var mySwiper = new Swiper ('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    })        
+
+    let oBlock = document.querySelectorAll('[data-xxx]');
+    for (let i = 0; i < oBlock.length; i++) {
+      oBlock[i].classList.add('offset');
+    }
+    getCloset();
+    let oTarget = document.querySelectorAll('[data-xxx]');
+    profolio01.onclick = function () {
+      activeBar.className = "bar01";
+    }
+    profolio02.onclick = function () {
+      activeBar.className = "bar02";
+    }
+    profolio03.onclick = function () {
+      activeBar.className = "bar03";
+    }
+    //页面loading
+    setTimeout(function () {
+      siteWelcome.classList.remove('active');
+    }, 2000);
+    //固定topBar
+    window.onscroll = function () {
+      if (window.scrollY > 0) {
+        topBar.classList.add('active');
+      } else {
+        topBar.classList.remove('active');
+      }
+      getCloset();
+    }
+    //鼠标悬停显示下拉菜单，其实明明可以用css解决的问题为什么要用JS，完全不理解，算了，就练练手吧
+    let liTags = document.querySelectorAll('nav.menu>ul>li');
+    console.log(liTags);
+    for (let i = 0; i < liTags.length; i++) {
+      liTags[i].onmouseenter = function (e) {
+        let target = e.currentTarget;
+        target.classList.add('active');
+      }
+      liTags[i].onmouseleave = function (e) {
+        let target = e.currentTarget;
+        target.classList.remove('active');
+      }
+    }
+    requestAnimationFrame(animate);
+    let aTags = document.querySelectorAll('nav.menu>ul>li>a');
+    for (let i = 0; i < aTags.length; i++) {
+      aTags[i].onclick = function (e) {
+        e.preventDefault();
+        let target = e.currentTarget;
+        let targetId = target.getAttribute('href');
+
+        let currentTop = document.documentElement.scrollTop || document.body.scrollTop;
+        let targetTop = document.querySelectorAll(targetId)[0].offsetTop - 60;
+
+        var coords = { x: 0, y: currentTop };
+        var tween = new TWEEN.Tween(coords)
+          .to({ x: 0, y: targetTop }, time)
+          .easing(TWEEN.Easing.Sinusoidal.In)
+          .onUpdate(function () {
+            window.scrollTo(0, coords.y)
+          })
+          .start();
+      }
+    }
+    function animate(time) {
+      requestAnimationFrame(animate);
+      TWEEN.update(time);
+    }
+    //滚动位置与导航对应
+    function getCloset() {
+      //滚动页面时对应导航显示active
+      let oTarget = document.querySelectorAll('[data-xxx]');
+      let minDistance = Math.abs(oTarget[0].offsetTop - window.scrollY);
+      let minIndex = 0;
+      for (let i = 0; i < oTarget.length; i++) {
+        if (Math.abs(oTarget[i].offsetTop - window.scrollY) < minDistance) {
+          minIndex = i;
+          minDistance = Math.abs(oTarget[i].offsetTop - window.scrollY);
+        }
+      }
+      oTarget[minIndex].classList.remove('offset');
+      let targetId = oTarget[minIndex].id;
+      let aTarget = document.querySelector('a[href="#' + targetId + '"]');
+      var aParent = aTarget.parentNode.parentNode;
+      let aSiblings = aParent.children;
+      for (let i = 0; i < aSiblings.length; i++) {
+        aSiblings[i].classList.remove('highlight');
+      }
+      aTarget.parentNode.classList.add('highlight');
+    }
+  </script>
 </body>
+
 </html>

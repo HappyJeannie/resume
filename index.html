@@ -245,108 +245,12 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.js"></script>
-  <script> 
-    //轮播
-    var mySwiper = new Swiper ('.swiper-container', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }
-    })        
-
-    let oBlock = document.querySelectorAll('[data-xxx]');
-    for (let i = 0; i < oBlock.length; i++) {
-      oBlock[i].classList.add('offset');
-    }
-    getCloset();
-    let oTarget = document.querySelectorAll('[data-xxx]');
-    profolio01.onclick = function () {
-      activeBar.className = "bar01";
-    }
-    profolio02.onclick = function () {
-      activeBar.className = "bar02";
-    }
-    profolio03.onclick = function () {
-      activeBar.className = "bar03";
-    }
-    //页面loading
-    setTimeout(function () {
-      siteWelcome.classList.remove('active');
-    }, 2000);
-    //固定topBar
-    window.onscroll = function () {
-      if (window.scrollY > 0) {
-        topBar.classList.add('active');
-      } else {
-        topBar.classList.remove('active');
-      }
-      getCloset();
-    }
-    //鼠标悬停显示下拉菜单，其实明明可以用css解决的问题为什么要用JS，完全不理解，算了，就练练手吧
-    let liTags = document.querySelectorAll('nav.menu>ul>li');
-    console.log(liTags);
-    for (let i = 0; i < liTags.length; i++) {
-      liTags[i].onmouseenter = function (e) {
-        let target = e.currentTarget;
-        target.classList.add('active');
-      }
-      liTags[i].onmouseleave = function (e) {
-        let target = e.currentTarget;
-        target.classList.remove('active');
-      }
-    }
-    requestAnimationFrame(animate);
-    let aTags = document.querySelectorAll('nav.menu>ul>li>a');
-    for (let i = 0; i < aTags.length; i++) {
-      aTags[i].onclick = function (e) {
-        e.preventDefault();
-        let target = e.currentTarget;
-        let targetId = target.getAttribute('href');
-
-        let currentTop = document.documentElement.scrollTop || document.body.scrollTop;
-        let targetTop = document.querySelectorAll(targetId)[0].offsetTop - 60;
-
-        var coords = { x: 0, y: currentTop };
-        var tween = new TWEEN.Tween(coords)
-          .to({ x: 0, y: targetTop }, time)
-          .easing(TWEEN.Easing.Sinusoidal.In)
-          .onUpdate(function () {
-            window.scrollTo(0, coords.y)
-          })
-          .start();
-      }
-    }
-    function animate(time) {
-      requestAnimationFrame(animate);
-      TWEEN.update(time);
-    }
-    //滚动位置与导航对应
-    function getCloset() {
-      //滚动页面时对应导航显示active
-      let oTarget = document.querySelectorAll('[data-xxx]');
-      let minDistance = Math.abs(oTarget[0].offsetTop - window.scrollY);
-      let minIndex = 0;
-      for (let i = 0; i < oTarget.length; i++) {
-        if (Math.abs(oTarget[i].offsetTop - window.scrollY) < minDistance) {
-          minIndex = i;
-          minDistance = Math.abs(oTarget[i].offsetTop - window.scrollY);
-        }
-      }
-      oTarget[minIndex].classList.remove('offset');
-      let targetId = oTarget[minIndex].id;
-      let aTarget = document.querySelector('a[href="#' + targetId + '"]');
-      var aParent = aTarget.parentNode.parentNode;
-      let aSiblings = aParent.children;
-      for (let i = 0; i < aSiblings.length; i++) {
-        aSiblings[i].classList.remove('highlight');
-      }
-      aTarget.parentNode.classList.add('highlight');
-    }
-  </script>
+  <script src="./js/init-swiper.js"></script>
+  <script src="./js/auto-slide-up.js"></script>
+  <script src="./js/sticky-topbar.js"></script>
+  <script src="./js/loading.js"></script>
+  <script src="./js/menu-hover.js"></script>
+  <script src="./js/loading.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/load.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
+  <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
 </head>
 
 <body>
@@ -192,49 +192,22 @@
             </div>
           </nav>
           <div class="jobs">
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="./img/canvas.jpg"></div>
-                  <div class="swiper-slide"><img src="./img/navbar.jpg"></div>
-                  <div class="swiper-slide"><img src="./img/swiper.png"></div>
-              </div>
-              
-              <div class="swiper-pagination"></div>
+            <div id="mySlides">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="./img/canvas.jpg"></div>
+                      <div class="swiper-slide"><img src="./img/navbar.jpg"></div>
+                      <div class="swiper-slide"><img src="./img/swiper.png"></div>
+                  </div>
+                  
+                  <div class="swiper-pagination"></div>
+                </div>
             </div>
+            
           </div>
           <!-- 如果需要导航按钮 -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-          <!-- <div class="jobs clearfix">
-            <div class="big job">
-              <a href="https://happyjeannie.github.io/" target="_blank">
-                <div class="img"></div>
-                <div class="txt">
-                  <p class="tit">个人博客</p>
-                  <p class="detail">Hexo+Github搭建个人博客</p>
-                </div>
-              </a>
-
-            </div>
-            <div class="small job" style="left:620px;top:0px;">
-              <a href="https://happyjeannie.github.io/resume/index.html" target="_blank">
-                <div class="img"></div>
-                <div class="txt">
-                  <p class="tit">个人简历</p>
-                  <p class="detail">各个项目介绍</p>
-                </div>
-              </a>
-            </div>
-            <div class="small job" style="left:620px;top:295px;">
-              <a href="javascript:;">
-                <div class="img"></div>
-                <div class="txt">
-                  <p class="tit">作品三</p>
-                  <p class="detail">作品描述</p>
-                </div>
-              </a>
-            </div>
-          </div> -->
         </section>
       </div>
 
@@ -243,14 +216,14 @@
       Summer的个人简历
     </footer>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.js"></script>
+  <script src="./libs/tween/Tween.min.js"></script>
+  <script src="./libs/swiper/swiper.js"></script>
   <script src="./js/init-swiper.js"></script>
   <script src="./js/auto-slide-up.js"></script>
   <script src="./js/sticky-topbar.js"></script>
   <script src="./js/loading.js"></script>
   <script src="./js/menu-hover.js"></script>
-  <script src="./js/loading.js"></script>
+  <script src="./js/smoothly-nav.js"></script>
 </body>
 
 </html>

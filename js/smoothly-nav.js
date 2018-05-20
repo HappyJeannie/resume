@@ -1,25 +1,47 @@
-requestAnimationFrame(animate);
-    let aTags = document.querySelectorAll('nav.menu>ul>li>a');
-    for (let i = 0; i < aTags.length; i++) {
-      aTags[i].onclick = function (e) {
-        e.preventDefault();
-        let target = e.currentTarget;
-        let targetId = target.getAttribute('href');
-
-        let currentTop = document.documentElement.scrollTop || document.body.scrollTop;
-        let targetTop = document.querySelectorAll(targetId)[0].offsetTop - 60;
-
-        var coords = { x: 0, y: currentTop };
-        var tween = new TWEEN.Tween(coords)
-          .to({ x: 0, y: targetTop }, time)
-          .easing(TWEEN.Easing.Sinusoidal.In)
-          .onUpdate(function () {
-            window.scrollTo(0, coords.y)
-          })
-          .start();
-      }
-    }
-    function animate(time) {
+!function(){
+  let view = document.querySelector('nav.menu');
+  let controller = {
+    view : null,
+    aTags : null,
+    initAnimation : function(){
       requestAnimationFrame(animate);
-      TWEEN.update(time);
+      function animate(time) {
+        requestAnimationFrame(animate);
+        TWEEN.update(time);
+      }    
+    },
+    init : function(view){
+      this.view = view;
+      this.aTags = this.view.querySelectorAll('nav.menu>ul>li>a');
+      this.initAnimation();
+      this.bindEvents();
+      
+    },
+    bindEvents : function(){
+      let aTags = this.aTags;
+      for (let i = 0; i < aTags.length; i++) {
+        aTags[i].onclick = (e) => {
+          e.preventDefault();
+          let target = e.currentTarget;
+          this.scrollToElement(target);
+        }
+      }
+    },
+    scrollToElement : function(target){
+      let targetId = target.getAttribute('href');
+    
+      let currentTop = document.documentElement.scrollTop || document.body.scrollTop;
+      let targetTop = document.querySelectorAll(targetId)[0].offsetTop - 60;
+
+      var coords = { x: 0, y: currentTop };
+      var tween = new TWEEN.Tween(coords)
+        .to({ x: 0, y: targetTop }, 500)
+        .easing(TWEEN.Easing.Sinusoidal.In)
+        .onUpdate(function () {
+          window.scrollTo(0, coords.y)
+        })
+        .start();
     }
+  }
+  controller.init(view);
+}.call()

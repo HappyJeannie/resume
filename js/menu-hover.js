@@ -1,3 +1,4 @@
+!function(){
   //鼠标悬停显示下拉菜单，其实明明可以用css解决的问题为什么要用JS，完全不理解，算了，就练练手吧
   let liTags = document.querySelectorAll('nav.menu>ul>li');
   console.log(liTags);
@@ -11,3 +12,4 @@
       target.classList.remove('active');
     }
   }
+}.call()

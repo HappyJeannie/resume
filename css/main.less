@@ -603,6 +603,67 @@
         }
       }
     }
+    .message{
+      padding: 20px 10px;
+      height: 500px;
+      position: relative;
+      .message-list{
+        height: 80%;
+        overflow-y: auto;
+        ul{
+          padding: 20px 30px;
+          li{
+            display: flex;
+            flex-direction: row;
+            line-height: 30px;
+            padding: 10px 0px;
+            border-bottom: 1px solid #e6e6e6;
+            img{
+              width: 30px;
+              height: 30px;
+              margin-right: 10px;
+              border:1px solid #ccc;
+              border-radius: 4px;
+            }
+            span{
+              font-size: 14px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+      .post-message{
+        height: 20%;
+        form{
+          display: flex;
+          flex-direction: row;
+          padding: 26px 30px;
+          div.item{
+            line-height: 40px;
+            margin-right: 20px;
+            font-size: 14px;
+            input{
+              height: 30px;
+              padding: 0px 4px;
+            }
+            input[type="submit"]{
+              height: 30px;
+              line-height: 30px;
+            }
+            &:last-child{
+              margin-right: 0px;
+            }
+            &:nth-child(2){
+              input{
+                width: 200px;
+              }
+            }
+          }
+          
+        }
+        
+      }
+    }
   }
 }
 footer.footer{

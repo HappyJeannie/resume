@@ -562,6 +562,63 @@
 .wrapper .content .profolio .jobs .small:last-child .img {
   background-image: url('../img/pro03.jpg');
 }
+.wrapper .content .message {
+  padding: 20px 10px;
+  height: 500px;
+  position: relative;
+}
+.wrapper .content .message .message-list {
+  height: 80%;
+  overflow-y: auto;
+}
+.wrapper .content .message .message-list ul {
+  padding: 20px 30px;
+}
+.wrapper .content .message .message-list ul li {
+  display: flex;
+  flex-direction: row;
+  line-height: 30px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.wrapper .content .message .message-list ul li img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.wrapper .content .message .message-list ul li span {
+  font-size: 14px;
+  line-height: 30px;
+}
+.wrapper .content .message .post-message {
+  height: 20%;
+}
+.wrapper .content .message .post-message form {
+  display: flex;
+  flex-direction: row;
+  padding: 26px 30px;
+}
+.wrapper .content .message .post-message form div.item {
+  line-height: 40px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+.wrapper .content .message .post-message form div.item input {
+  height: 30px;
+  padding: 0px 4px;
+}
+.wrapper .content .message .post-message form div.item input[type="submit"] {
+  height: 30px;
+  line-height: 30px;
+}
+.wrapper .content .message .post-message form div.item:last-child {
+  margin-right: 0px;
+}
+.wrapper .content .message .post-message form div.item:nth-child(2) input {
+  width: 200px;
+}
 footer.footer {
   height: 50px;
   line-height: 50px;

@@ -564,7 +564,7 @@
 }
 .wrapper .content .message {
   padding: 20px 10px;
-  height: 500px;
+  height: 600px;
   position: relative;
 }
 .wrapper .content .message .message-list {
@@ -598,20 +598,27 @@
 .wrapper .content .message .post-message form {
   display: flex;
   flex-direction: row;
-  padding: 26px 30px;
+  padding: 10px 30px;
 }
 .wrapper .content .message .post-message form div.item {
   line-height: 40px;
   margin-right: 20px;
   font-size: 14px;
+  width: 30%;
 }
 .wrapper .content .message .post-message form div.item input {
   height: 30px;
   padding: 0px 4px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
 }
-.wrapper .content .message .post-message form div.item input[type="submit"] {
+.wrapper .content .message .post-message form div.item button {
   height: 30px;
   line-height: 30px;
+  padding: 0px 10px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
 }
 .wrapper .content .message .post-message form div.item:last-child {
   margin-right: 0px;

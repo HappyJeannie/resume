@@ -605,7 +605,7 @@
     }
     .message{
       padding: 20px 10px;
-      height: 500px;
+      height: 600px;
       position: relative;
       .message-list{
         height: 80%;
@@ -637,18 +637,25 @@
         form{
           display: flex;
           flex-direction: row;
-          padding: 26px 30px;
+          padding: 10px 30px;
           div.item{
             line-height: 40px;
             margin-right: 20px;
             font-size: 14px;
+            width: 30%;
             input{
               height: 30px;
               padding: 0px 4px;
+              background: none;
+              border:none;
+              border-bottom: 1px solid #666;
             }
-            input[type="submit"]{
+            button{
               height: 30px;
               line-height: 30px;
+              padding: 0px 10px;
+              border: 1px solid #e6e6e6;
+              background: #fff;
             }
             &:last-child{
               margin-right: 0px;

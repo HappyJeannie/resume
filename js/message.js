@@ -59,7 +59,7 @@
         });
     },
     bindEvents:function(){
-      this.myForm.addEventListener('submit',function(e){
+      this.myForm.addEventListener('submit',(e)=>{
         e.preventDefault();
         this.saveMessage();
       })
@@ -68,18 +68,21 @@
       let myForm = this.myForm;
       let name = myForm.querySelector('input[name="name"]').value;
       let content = myForm.querySelector('input[name="content"]').value;
-      this.model.save(name,content).then(function(object) {//保存成功的回调
+      this.model.save(name,content).then((object)=> {//保存成功的回调
         // console.log(object);
         // window.location.reload();
-        let obj = document.querySelector('#messageList');
+        let item = object.attributes;
         let li = document.createElement('li');
+        let imgs = this.imgs;
         li.innerHTML = `
-                            <img src="./img/avatar/`+ imgs[Math.floor(Math.random() * imgs.length)] +`" alt="">
-                            <span class="name">${object.attributes.name}</span>：
-                            <span class="text">${object.attributes.msg}</span>
+                            <img src="./img/avatar/${imgs[Math.floor(Math.random() * imgs.length)]}">
+                            <span class="name">${item.name}</span>：
+                            <span class="text">${item.msg}</span>
                         `;
-        obj.append(li);
-        myForm.reset();
+        this.messageList.append(li);
+        this.myForm.reset();
+      }).then(()=>{},(err)=>{
+        console.log(err);
       })
     }
   }

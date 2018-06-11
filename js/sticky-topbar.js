@@ -1,6 +1,6 @@
 !function(){
   //固定topBar
-  let view = document.querySelector('#topBar');
+  let view = View('#topBar');
   let controller = {
     view : null,
     init : function(view){

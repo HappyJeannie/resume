@@ -1,28 +1,6 @@
 !function(){
-  let view = document.querySelector('section.message');
-  var model = {
-    initAV : function(){
-      var APP_ID = '0r7UeXa1LVbwKLzTKIKvxueQ-gzGzoHsz';
-      var APP_KEY = 'ELk4KGSA1TR3oAd091pwWi9m';
-      AV.init({appId: APP_ID,appKey: APP_KEY});
-    },
-    fetch : function(){
-      //存数据
-      var query = new AV.Query('Message');
-      return query.find();
-    },
-    save:function(name,content){
-      //创建表
-      let Message = AV.Object.extend('Message');
-      //创建表中的一条数据
-      let message = new Message();
-      //存储一条数据到表中
-      return message.save({
-        'name': name,
-        'msg':content
-      })
-    }
-  }
+  let view = View('section.message');
+  let model = Model({resourceName : "Message"})
   let controller = {
     view : null,
     model:null,
@@ -34,7 +12,7 @@
       this.model = model;
       this.messageList = view.querySelector('#messageList');
       this.myForm = view.querySelector('#postMessageForm')
-      this.model.initAV();
+      this.model.init();
       this.loadMessages();
       this.bindEvents();
     },
@@ -68,7 +46,11 @@
       let myForm = this.myForm;
       let name = myForm.querySelector('input[name="name"]').value;
       let content = myForm.querySelector('input[name="content"]').value;
-      this.model.save(name,content).then((object)=> {//保存成功的回调
+      if(content === '' || name === ''){
+        alert('姓名和留言内容不能为空');
+        return false;
+      }
+      this.model.save({name,content}).then((object)=> {//保存成功的回调
         // console.log(object);
         // window.location.reload();
         let item = object.attributes;

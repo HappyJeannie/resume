@@ -1,5 +1,5 @@
 !function(){
-  let view = document.querySelector('#mySlides');
+  let view = View('#mySlides');
   //轮播
   let controller = {
     view : null,

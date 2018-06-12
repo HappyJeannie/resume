@@ -1,13 +1,11 @@
 !function(){
   //固定topBar
   let view = View('#topBar');
-  let controller = {
-    view : null,
-    init : function(view){
-      this.view = view;
-      this.addEvents();
+  let controller = Controller({
+    init:function(){
+
     },
-    addEvents : function(){
+    bindEvents:function(){
       let view = this.view;
       window.addEventListener('scroll',function(){
         if (window.scrollY > 0) {
@@ -17,7 +15,6 @@
         }
       })
     }
-  }
+  })
   controller.init(view);
-  //controller.init.call(controller,view),所以以上代码中的 this 为controller
 }.call()

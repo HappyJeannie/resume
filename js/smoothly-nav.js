@@ -1,8 +1,7 @@
 !function(){
   let view = View('nav.menu');
-  let controller = {
-    view : null,
-    aTags : null,
+  let controller = Controller({
+    aTags:null,
     initAnimation : function(){
       requestAnimationFrame(animate);
       function animate(time) {
@@ -10,12 +9,9 @@
         TWEEN.update(time);
       }    
     },
-    init : function(view){
-      this.view = view;
+    init:function(){
       this.aTags = this.view.querySelectorAll('nav.menu>ul>li>a');
       this.initAnimation();
-      this.bindEvents();
-      
     },
     bindEvents : function(){
       let aTags = this.aTags;
@@ -42,6 +38,6 @@
         })
         .start();
     }
-  }
+  })
   controller.init(view);
 }.call()

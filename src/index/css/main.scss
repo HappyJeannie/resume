@@ -1,5 +1,5 @@
-@base:#9a9da2;
-@mark:#e8676b;
+$base:#9a9da2;
+$mark:#e8676b;
 .wrapper{
   background: #efefef;
   .header{
@@ -39,7 +39,7 @@
         font-weight: 400;
         font-family: 'Arial Black';
         span.rs{
-          color: @mark;
+          color: $mark;
           font-weight: 700;
         }
         span.card{
@@ -72,7 +72,7 @@
                 display: block;
                 width: 0%;
                 height: 2px;
-                background: @mark;
+                background: $mark;
                 transition: width 0.3s ease-in-out;
               }
             }

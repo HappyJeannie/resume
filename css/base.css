@@ -9,6 +9,7 @@
   color: #3d4451;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  font-family: Arial, 'SimHei';
 }
 ul {
   list-style: none;
